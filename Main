@@ -44,7 +44,7 @@ do
                         Callback = function()
                             print("Confirmed the dialog.")
                             local character = game.Players.LocalPlayer.Character
-local reachDistance = 16
+local reachDistance = 35
 local bodyParts = {"LeftBoot", "RightBoot"}
 
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -89,7 +89,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
     reachBox.Position = humanoidRootPart.Position
 
     -- Set the size of the reach box to indicate the effective range
-    reachBox.Size = Vector3.new(reachDistance * 2, reachDistance * 2, reachDistance * 2)
+    reachBox.Size = Vector3.new(reachDistance * 5, reachDistance * 5, reachDistance * 5)
 
     -- Find and interact with balls in the workspace
     findAndTouchBalls(workspace)
@@ -121,13 +121,13 @@ end)
                         Callback = function()
                             
 local character = game.Players.LocalPlayer.Character
-local reachDistance = 6
+local reachDistance =35
 local bodyParts = {"LeftBoot", "RightBoot"}
 
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
 local reachBox = Instance.new("Part")
-reachBox.Size = Vector3.new(reachDistance * 2, reachDistance * 2, reachDistance * 2)
+reachBox.Size = Vector3.new(reachDistance * 5, reachDistance * 5, reachDistance * 5)
 reachBox.Position = humanoidRootPart.Position
 reachBox.Anchored = true
 reachBox.CanCollide = false
@@ -158,7 +158,7 @@ end
 
 game:GetService("RunService").RenderStepped:Connect(function()
     reachBox.Position = humanoidRootPart.Position
-    reachBox.Size = Vector3.new(reachDistance * 2, reachDistance * 2, reachDistance * 2)
+    reachBox.Size = Vector3.new(reachDistance * 5, reachDistance * 5, reachDistance * 5)
     for _, partName in ipairs(bodyParts) do
         local bodyPart = character:FindFirstChild(partName)
         if bodyPart then
@@ -259,7 +259,7 @@ end)
                         Title = "Confirm",
                         Callback = function()
 local character = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
-local reachDistance = 6  
+local reachDistance = 35  
 local bodyParts = {"LeftBoot", "RightBoot", "HumanoidRootPart"} 
 
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
